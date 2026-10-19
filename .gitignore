@@ -1,0 +1,116 @@
+
+# Estimación de Tiempos PERT
+
+Aplicación desarrollada en Java 17 para calcular la duración
+esperada de actividades mediante la técnica PERT
+(Program Evaluation and Review Technique).
+
+## Objetivo
+
+Implementar un algoritmo que permita estimar el tiempo esperado
+de una actividad a partir de tres estimaciones:
+
+- **Tiempo optimista (O):** duración estimada en condiciones favorables.
+- **Tiempo más probable (M):** duración que se considera más probable.
+- **Tiempo pesimista (P):** duración estimada en condiciones desfavorables.
+
+## Fórmula PERT
+
+El tiempo esperado se calcula mediante la siguiente expresión:
+
+TE = (O + 4M + P) / 6
+
+Donde:
+
+- TE: tiempo esperado.
+- O: tiempo optimista.
+- M: tiempo más probable.
+- P: tiempo pesimista.
+
+### Ejemplo
+
+Para una actividad con los siguientes tiempos:
+
+- O = 2 días
+- M = 4 días
+- P = 8 días
+
+El resultado es:
+
+TE = (2 + 4(4) + 8) / 6 = 4.33 días
+
+## Tecnologías
+
+- Java 17
+- Maven
+- JUnit 5
+- Git y GitHub
+
+## Estructura del proyecto
+
+```text
+matematicas-java/
+├── pom.xml
+├── README.md
+├── .gitignore
+└── src/
+    ├── main/
+    │   └── java/
+    │       └── com/
+    │           └── equipo/
+    │               └── matematicas/
+    │                   ├── Main.java
+    │                   └── EstimacionPert.java
+    └── test/
+        └── java/
+            └── com/
+                └── equipo/
+                    └── matematicas/
+                        └── EstimacionPertTest.java
+```
+
+## Requisitos
+
+- JDK 17.
+- Maven instalado o Maven Wrapper configurado.
+- Un editor compatible con Java, como Cursor o VS Code.
+
+## Compilación y ejecución
+
+Para compilar el proyecto y ejecutar las pruebas:
+
+```bash
+mvn clean test
+```
+
+Para generar el archivo JAR:
+
+```bash
+mvn package
+```
+
+Maven genera los archivos de compilación en el directorio `target/`.
+
+## Estado del desarrollo
+
+El proyecto se encuentra en su fase inicial.
+
+Funcionalidades previstas:
+
+- [x] Implementar la fórmula básica del tiempo esperado PERT.
+- [ ] Validar los tiempos de entrada.
+- [ ] Calcular la varianza de una actividad.
+- [ ] Incorporar pruebas unitarias.
+- [ ] Evaluar el cálculo de varias actividades.
+- [ ] Implementar la ruta crítica, si forma parte de los requisitos.
+
+Las funcionalidades se marcarán como completadas conforme se implementen
+y verifiquen.
+
+## Paquete principal
+
+`com.equipo.matematicas`
+
+target/
+out/
+*.class
