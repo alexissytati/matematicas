@@ -12,7 +12,6 @@
 
     <name>Estimacion de Tiempos PERT</name>
     <description>
-        Aplicacion Java para estimar tiempos mediante el algoritmo PERT.
     </description>
 
     <properties>
